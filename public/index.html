@@ -1,0 +1,158 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>API Documentation</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        background-color: #f9f9f9;
+        color: #333;
+      }
+
+      header {
+        background: #4a90e2;
+        color: white;
+        padding: 20px;
+        text-align: center;
+      }
+
+      main {
+        max-width: 800px;
+        margin: 20px auto;
+        padding: 20px;
+        background: white;
+        border-radius: 8px;
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+      }
+
+      h1 {
+        margin: 0;
+        font-size: 2.5em;
+      }
+
+      h2 {
+        color: #4a90e2;
+        border-bottom: 2px solid #eee;
+        padding-bottom: 10px;
+      }
+
+      h3 {
+        color: #555;
+        margin-top: 20px;
+      }
+
+      p {
+        line-height: 1.6;
+      }
+
+      code {
+        background: #eaeaea;
+        padding: 2px 5px;
+        border-radius: 4px;
+        font-family: monospace;
+      }
+
+      pre {
+        background: #f4f4f4;
+        padding: 15px;
+        border-radius: 5px;
+        overflow: auto;
+        font-family: monospace;
+        line-height: 1.5;
+      }
+
+      .endpoint {
+        margin: 20px 0;
+        padding: 15px;
+        border: 1px solid #ddd;
+        border-radius: 5px;
+        background: #f9f9f9;
+      }
+
+      .request-body {
+        background: #e3f2fd;
+        border-left: 5px solid #2196f3;
+      }
+
+      footer {
+        text-align: center;
+        margin: 20px 0;
+        font-size: 0.9em;
+        color: #777;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1>API Documentation</h1>
+    </header>
+    <main>
+      <h2>Endpoints</h2>
+
+      <div class="endpoint">
+        <h3>1. User Registration</h3>
+        <p><strong>URL:</strong> <code>/api/users/register</code></p>
+        <p><strong>Method:</strong> <code>POST</code></p>
+        <p><strong>Request Body:</strong></p>
+        <pre class="request-body">
+{
+    "username": "your_username",
+    "email": "your_email@example.com",
+    "password": "your_password"
+}
+            </pre
+        >
+      </div>
+
+      <div class="endpoint">
+        <h3>2. User Login</h3>
+        <p><strong>URL:</strong> <code>/api/users/login</code></p>
+        <p><strong>Method:</strong> <code>POST</code></p>
+        <p><strong>Request Body:</strong></p>
+        <pre class="request-body">
+{
+    "email": "your_email@example.com",
+    "password": "your_password"
+}
+            </pre
+        >
+      </div>
+
+      <div class="endpoint">
+        <h3>3. User Profile</h3>
+        <p><strong>URL:</strong> <code>/api/users/profile</code></p>
+        <p><strong>Method:</strong> <code>GET</code></p>
+        <p><strong>Authorization:</strong> Bearer token required</p>
+      </div>
+
+      <div class="endpoint">
+        <h3>4. User Profile Delete</h3>
+        <p><strong>URL:</strong> <code>/api/users/profile/delete</code></p>
+        <p><strong>Method:</strong> <code>POST</code></p>
+        <p><strong>Authorization:</strong> Bearer token required</p>
+      </div>
+
+      <div class="endpoint">
+        <h3>5. Edit User Profile</h3>
+        <p><strong>URL:</strong> <code>/api/users/profile/edit</code></p>
+        <p><strong>Method:</strong> <code>POST</code></p>
+        <p><strong>Authorization:</strong> Bearer token required</p>
+        <p><strong>Request Body:</strong></p>
+        <pre class="request-body">
+{
+    "username":"your_username",
+    "email": "your_email@example.com",
+    "password": "your_password"
+}
+            </pre
+        >
+      </div>
+    </main>
+
+    <footer>&copy; 2024 TDA Simple Express API. All rights reserved.</footer>
+  </body>
+</html>
